@@ -19,8 +19,8 @@ app.use(
         return {
             graphiql: true,
             schema: GraphQLSchema,
-        };
-    }),
+        }
+    })
 );
 
 module.exports = app;
