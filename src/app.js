@@ -11,14 +11,16 @@ const GraphQLSchema = require('./graphql/schema');
 
 const app = express();
 
-app.use(body_parser.json({limit: '50mb'}));
+app.use(body_parser.json({ limit: '50mb' }));
 
 app.use(
     '/',
     expressGraphQL(() => {
         return {
             graphiql: true,
-            schema: GraphQLSchema
+            schema: GraphQLSchema,
         };
     })
 );
+
+module.exports = app;

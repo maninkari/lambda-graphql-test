@@ -20,7 +20,7 @@ const PostsController = {
                 return __posts;
             })
             .catch((error) => {
-                return {error: error}
+                return {error: error};
             });
     },
 };
