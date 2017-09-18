@@ -9,6 +9,7 @@ const {
 
 // import the user query file we created
 const PostQuery = require('./queries/Post');
+const UtilisationQuery = require('./queries/Utilisation');
 
 
 // lets define our root query
@@ -16,12 +17,12 @@ const RootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
     description: 'This is the default root query provided by our application',
     fields: {
-        posts: PostQuery.index(),
+        utilisation: UtilisationQuery.index(),
     },
 });
 
 
 // export the schema
 module.exports = new GraphQLSchema({
-    query: RootQuery,
+    query: RootQuery
 });

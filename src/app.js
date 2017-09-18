@@ -18,9 +18,9 @@ app.use(
     expressGraphQL(() => {
         return {
             graphiql: true,
-            schema: GraphQLSchema,
-        };
-    }),
+            schema: GraphQLSchema
+        }
+    })
 );
 
 module.exports = app;

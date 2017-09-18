@@ -6,6 +6,7 @@ const PostsController = {
 
     index: (args) => {
         const URL = `https://www.reddit.com/r/${args.subreddit || 'javascript'}.json`;
+        console.log(URL);
 
         return axios.get(URL)
             .then((response) => {
@@ -15,8 +16,8 @@ const PostsController = {
                 posts.map(post => {
                     post.data.content = post.data.selftext_html;
                     __posts.push(post.data);
-                })
-                ;
+                });
+
                 return __posts;
             })
             .catch((error) => {
